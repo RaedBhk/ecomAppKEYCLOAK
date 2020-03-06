@@ -13,7 +13,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/ecom-app/src/main/java/org/rbhk/ecomapp/controller/ProductController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecom-app/src/main/java/org/rbhk/ecomapp/dao/ProductRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/ecom-app/src/main/java/org/rbhk/ecomapp/models/Product.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecom-app/src/main/resources/application.properties">
           <value>
             <set />
           </value>
