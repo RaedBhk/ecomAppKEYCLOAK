@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -25,15 +26,19 @@
     </ul>
     <ul class="navbar-nav ml-auto">
         <!-- Dropdown -->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" sec:authorize="isAuthenticated()">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                User name
+                <span sec:authentication="name"></span>
+
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/products">Logout</a>
-                <a class="dropdown-item" href="#">Update Password</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
+                <a class="dropdown-item" href="/updatePassword">Update Password</a>
                 <a class="dropdown-item" href="#">Link 3</a>
             </div>
+        </li>
+        <li class="nav-item" sec:authorize="isAnonymous()">
+            <a class="nav-link" href="/sso/login">Login</a>
         </li>
     </ul>
 </nav>
